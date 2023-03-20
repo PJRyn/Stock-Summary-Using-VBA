@@ -1,5 +1,15 @@
-# VBA-challenge
-## Introduction
-This project's goal was to create a VBA script which can provide basic analysis to contain multiple sheets, provided they are properly formatted. The VBscript 'YearlyStockCalc.vba' provided can be added to an excel document and provide a summary table on each sheet contained within the Excel file. The summary table is made up of four categories, the first being the title of ticker. The second is 'Yearly Change' which covers the change of stock price from the first value compared to the final value of the given year. It also displays this as a currency and provides basic visual information by displaying red if it was lower and green if it was higher in the given year (yellow if there is no difference). The third is 'Percentage Change' which shows the percentage of how much the stock's price has changed from the first value and the final value of a given year. The fourth and final is 'Total Stock Volume' which provides a count of the total volume of stocks over a given year.
-## What is the process
-The script will first load a message box telling the user which sheet is currently being processed. After it will initialize the variables used. Then it will take the first value provided for the first stock, then it will read through each line counting up the total stock volume for each category. Once it has detected that the next line will be a different stock it takes the closing value for that stock and prints out the calculated difference from the first and last stock price. Then print the difference in both percentage and monetary value and print the total stock volume. The script repeats this process until it has read the entire sheet. After it has completed a sheet a new message box stating the next sheet it will process. This also will repeat for each sheet in the Excel file. Once it is done it prints a message box stating "completed!".
+# Stock Summary Using VBA
+## About the Project
+This projects aim was to create a VBA script that could provide some basic analysis for Excel files that contain multiple sheets. The Excel files list companies and multiple entries for each company listing: 
+- the date the data was taken
+- the stock price at opening
+- the highest price it reached that day
+- the lowest price it reached that day
+- the stock price at closing
+- the volume of stocks
+The VBA script creates a table adjacent to the Excel table. This new table provides an analysis of each company by listing:
+- each companies yearly change in stock price and coloring them red if it has decreased in value and green if it increased in value
+- a percentage of how much the stock has changed in price throughout the year
+- the total traded stocks that year
+## Using the VBA script
+To utilize this script open one of the provided Excel sheets or another that uses the same structure, then go to the developer tab select the visual basic option. From within the visual basic menu either 'drag and drop' the YearlyStockCalc.vba into the side bar or select file and insert and add the YearlyStockCalc.vba file. After it has been added run the macro and wait for the message box that says "completed!".
